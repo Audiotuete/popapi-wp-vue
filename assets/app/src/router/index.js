@@ -7,7 +7,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {path: '/idee', name: 'startseite', component: Idee},
-    {path: '*', name: 'alles', component: Startseite}
+    {path: '/', name: 'startseite', component: Startseite},
+    {path: '/idee', name: 'idee', component: Idee}
   ]
 })
