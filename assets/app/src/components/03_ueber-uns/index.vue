@@ -1,16 +1,15 @@
 <template>
-  <div class="startseite">
+  <div class="ueber-uns">
     <h1>{{ msg }}</h1>
-
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Startseite',
+  name: 'ueber-uns',
   data () {
     return {
-      msg: 'Willkommen auf der Startseite'
+      msg: 'Ein paar Infos'
     }
   }
 }
