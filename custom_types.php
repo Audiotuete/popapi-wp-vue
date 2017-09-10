@@ -22,7 +22,7 @@ function ath_register_post_type( $post_type, $plural_name, $singular_name, $item
         'taxonomies'      => $taxonomies,
         'has_archive'     => true,
         'show_in_rest'    => true,
-        'rest_base'       => $postt,
+        'rest_base'       => $slug,
         'rewrite'         => [ 'slug' => $slug ],
         'capability_type' => $capability_type,
         'menu_position'   => $menu_position,
@@ -75,7 +75,7 @@ function f_add_custom_meta( $editor_id )
     $setting = [
         'quicktags'     => false,
         'media_buttons' => false,
-        'editor_height' => 200
+        'editor_height' => 200,
     ];
     wp_editor( $how_to_apply, $editor_id , $setting);
 }
@@ -116,3 +116,38 @@ function adds_all_meta_boxes()
 }
 
 add_action( 'add_meta_boxes', 'adds_all_meta_boxes' );
+
+/*
+Register API Endpoint for new fields Begründung und Maßnahmen
+*/
+
+function slug_get_post_meta_cb( $object, $field_name, $request ) {
+    return get_post_meta( $object['id'], $field_name );
+}
+
+function register_custom_meta_fields() {
+
+    $in_post_types = [
+        "governance",
+        "betrieb",
+        "lehre",
+        "forschung"
+    ];
+
+    foreach ($in_post_types as $post_type) {
+        register_rest_field( $post_type, 'begruendung',
+            array(
+                'get_callback'    => 'slug_get_post_meta_cb',
+                'schema'          => null
+            )
+        );
+        register_rest_field( $post_type, 'massnahmen',
+            array(
+                'get_callback'    => 'slug_get_post_meta_cb',
+                'schema'          => null
+            )
+        );
+    }
+}
+
+add_action( 'rest_api_init', 'register_custom_meta_fields');
