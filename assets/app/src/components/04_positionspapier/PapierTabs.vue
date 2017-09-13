@@ -18,11 +18,20 @@
 <script>
 export default {
   name: 'PapierTabs',
+  props: [
+    'forderung'
+  ],
   data () {
     return {
       currentTab: 0,
-      tabs: [{id: 0, abschnitt: 'Dazu gehören', name: 'Forderung1'}, {id: 1, abschnitt: 'Begründung', name: 'Forderung2'}, {id: 2, abschnitt: 'Maßnahmen', name: 'Forderung3'}]
+      tabs: [
+      {id: 0, abschnitt: 'Dazu gehören', name: 'What a mess'},
+      {id: 1, abschnitt: 'Begründung', name: 'test2'},
+      {id: 2, abschnitt: 'Maßnahmen', name: 'test3'}]
     }
+  },
+  computed: {
+    // This is where the magic is going to happen.
   }
 }
 </script>

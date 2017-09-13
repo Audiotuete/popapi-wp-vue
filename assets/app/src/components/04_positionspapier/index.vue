@@ -5,28 +5,22 @@
     <router-link></router-link>
     <router-link></router-link>
     <router-view></router-view> -->
-    <PapierCollapse>
-      <div slot="collapse-header">
-        Forderung 1
-			</div>
-			<div slot="collapse-body">
-        <PapierTabs></PapierTabs>
-			</div>
-    </PapierCollapse>
+   <!-- <PapierKapitelContainer kapitel="governance"/> -->
+   <PapierKapitelContainer kapitel="betrieb"/>
+   <!-- <PapierKapitelContainer kapitel="lehre"/>
+   <PapierKapitelContainer kapitel="forschung"/> -->
 
     
   </div>
 </template>
 
 <script>
-import PapierTabs from './PapierTabs'
-import PapierCollapse from './PapierCollapse'
+import PapierKapitelContainer from './PapierKapitelContainer'
 
 export default {
   name: 'positionspapier',
   components: {
-    PapierTabs,
-    PapierCollapse
+    PapierKapitelContainer
   },
   data () {
     return {
