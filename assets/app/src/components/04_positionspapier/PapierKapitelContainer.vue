@@ -5,7 +5,7 @@
         {{forderung.title.rendered}}
 			</div>
 			<div slot="collapse-body">
-        <PapierTabs forderung="forderung"></PapierTabs>
+        <PapierTabs :forderung="forderung"></PapierTabs>
 			</div>
     </PapierCollapse>
   </div>
@@ -27,15 +27,17 @@ export default {
   ],
   data () {
     return {
-      forderungen: []
+      forderungen: null
     }
   },
-  beforeMount: function () {
-    let v = this
-    axios.get(`http://localhost/wordpress/wp-json/wp/v2/${this.kapitel}`)
-      .then(function (response) {
-        v.forderungen = response.data
-      })
+  mounted: function () {
+    if (this.forderungen === null) {
+      let v = this
+      axios.get(`http://localhost/wordpress/wp-json/wp/v2/${this.kapitel}`)
+        .then(function (response) {
+          v.forderungen = response.data
+        })
+    }
   }
 }
 </script>

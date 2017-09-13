@@ -2,7 +2,7 @@
 import Startseite from '@/components/01_startseite'
 import Idee from '@/components/02_idee'
 import UeberUns from '@/components/03_ueber-uns'
-import Positionspapier from '@/components/04_positionspapier'
+import Positionspapier from '@/components/04_positionspapier/PapierMain'
 import Aktuelles from '@/components/05_aktuelles'
 import Unterzeichnen from '@/components/06_unterzeichnen'
 

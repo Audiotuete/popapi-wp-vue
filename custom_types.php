@@ -76,6 +76,7 @@ function f_add_custom_meta( $editor_id )
         'quicktags'     => false,
         'media_buttons' => false,
         'editor_height' => 200,
+        'wpautop'       => false
     ];
     wp_editor( $how_to_apply, $editor_id , $setting);
 }

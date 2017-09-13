@@ -5,11 +5,9 @@
               :class="{active : currentTab === index }"
               @click="currentTab = index">{{tab.abschnitt}}</button>
     </div>
-    <div v-for="(tab, index) in tabs" :key="tab.id"  class="tab-content">
-      <div v-show="currentTab === tab.id">
-        <h1>
-          {{tab.name}}
-        </h1>
+    <div v-for="(tab, index) in tabs" :key="tab.id" class="tab-content">
+      <div v-html="check_id(tab.id)" v-show="currentTab === tab.id">
+
       </div>
     </div>
   </div>
@@ -25,18 +23,30 @@ export default {
     return {
       currentTab: 0,
       tabs: [
-      {id: 0, abschnitt: 'Dazu gehören', name: 'What a mess'},
-      {id: 1, abschnitt: 'Begründung', name: 'test2'},
-      {id: 2, abschnitt: 'Maßnahmen', name: 'test3'}]
+        {id: 0, abschnitt: 'Dazu gehören'},
+        {id: 1, abschnitt: 'Begründung'},
+        {id: 2, abschnitt: 'Maßnahmen'}
+      ]
     }
   },
   computed: {
-    // This is where the magic is going to happen.
+    dazu_gehoeren () { return this.forderung.content.rendered },
+    begruendung () { return this.forderung.begruendung[0] },
+    massnahmen () { return this.forderung.massnahmen[0] }
+  },
+  methods: {
+    check_id (id) {
+      if (id === 0) {
+        return this.dazu_gehoeren
+      } else if (id === 1) {
+        return this.begruendung
+      }
+      return this.massnahmen
+    }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 button{
   padding: 10px;
