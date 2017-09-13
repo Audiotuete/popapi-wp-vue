@@ -1,6 +1,6 @@
 <?php
 /**
- * This is the bare minimum output. The "Create React App" assets will be enqueued and will be used
+ * This is the bare minimum output. The "Vue App" assets will be enqueued and will be used
  * for all template rendering.
  */
 ?>

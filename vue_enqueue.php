@@ -1,9 +1,6 @@
 <?php
-
-
-
 /**
- * Gets the contents of the Create React App manifest file
+ * Gets the contents of the Vue App manifest file
  *
  * @return array|bool|string
  */
@@ -23,7 +20,7 @@ function get_PT_Sans_Narrow_stylesheet() {
 }
  */
 /**
- * Gets the path to the stylesheet compiled by Create React App
+ * Gets the path to the stylesheet compiled by Vue App
  *
  * @return string
  */
@@ -32,7 +29,7 @@ function get_PT_Sans_Narrow_stylesheet() {
 	return get_template_directory_uri() . '/assets/app/dist/' . $manifest['app.css'];
 }
 /**
- * Gets the path to the built javascript file compiled by Create React App
+ * Gets the path to the built javascript file compiled by Vue App
  *
  * @return string
  */
