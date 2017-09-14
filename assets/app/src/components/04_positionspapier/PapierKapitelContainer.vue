@@ -27,17 +27,16 @@ export default {
   ],
   data () {
     return {
-      forderungen: null
+      forderungen: []
     }
   },
   mounted: function () {
-    if (this.forderungen === null) {
-      let v = this
-      axios.get(`http://localhost/wordpress/wp-json/wp/v2/${this.kapitel}`)
-        .then(function (response) {
-          v.forderungen = response.data
-        })
-    }
+    // TODO: Create API module for chaching more effetive
+    let v = this
+    axios.get(`http://localhost/wordpress/wp-json/wp/v2/${this.kapitel}`)
+      .then(function (response) {
+        v.forderungen = response.data
+      })
   }
 }
 </script>

@@ -1,10 +1,10 @@
 
-import Startseite from '@/components/01_startseite'
-import Idee from '@/components/02_idee'
-import UeberUns from '@/components/03_ueber-uns'
+import Startseite from '@/components/01_startseite/StartseiteMain'
+import Idee from '@/components/02_idee/IdeeMain'
+import UeberUns from '@/components/03_ueber-uns/UeberUnsMain'
 import Positionspapier from '@/components/04_positionspapier/PapierMain'
-import Aktuelles from '@/components/05_aktuelles'
-import Unterzeichnen from '@/components/06_unterzeichnen'
+import Aktuelles from '@/components/05_aktuelles/AktuellesMain'
+import Unterzeichnen from '@/components/06_unterzeichnen/UnterzeichnenMain'
 
 export const routes = [
     {path: '/', name: 'startseite', component: Startseite},
