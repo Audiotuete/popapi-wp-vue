@@ -10,12 +10,11 @@ function get_app_manifest() {
 	return $manifest;
 }
 /**
- * Gets the path to the googlefonts compiled by Create React App
+ * Gets the path to the googlefonts compiled by Vue App
  *
  * @return string
 
 function get_PT_Sans_Narrow_stylesheet() {
-	$manifest = get_app_manifest();
 	return '//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700';
 }
  */
