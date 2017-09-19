@@ -46,10 +46,10 @@ add_action( 'init', 'register_job_post_type' );
 function f_save_data( $post_id, $post, $update )
 {
     $meta_keys = [
-        'begruendung' => 'html',
-        'massnahmen' => 'html',
-        'city'         => 'text',
-        'country'      => 'text'
+        '_begruendung' => 'html',
+        '_massnahmen' => 'html',
+        // 'city'         => 'text',
+        // 'country'      => 'text'
     ];
 
     foreach ($meta_keys as $meta_key => $type) {
@@ -66,26 +66,26 @@ function f_save_data( $post_id, $post, $update )
 }
 add_action( 'save_post', 'f_save_data', 10, 3 );
 
-function f_add_custom_meta( $editor_id )  
+function f_add_custom_meta( $meta_field_id )  
 {
     global $post;
 
-    $how_to_apply = get_post_meta( $post->ID, $editor_id, true );
+    $how_to_apply = get_post_meta( $post->ID, $meta_field_id, true );
 
-    $setting = [
+    $settings = [
         'quicktags'     => false,
         'media_buttons' => false,
         'editor_height' => 200,
         'wpautop'       => false
     ];
-    wp_editor( $how_to_apply, $editor_id , $setting);
+    wp_editor( $how_to_apply, $meta_field_id , $settings);
 }
 
 function f_add_begruendung_meta() {
-    return f_add_custom_meta( "begruendung" ); 
+    return f_add_custom_meta( "_begruendung" ); 
 }
 function f_add_massnahmen_meta() {
-    return f_add_custom_meta( "massnahmen" );
+    return f_add_custom_meta( "_massnahmen" );
 }
 
 /*
@@ -136,13 +136,13 @@ function register_custom_meta_fields() {
     ];
 
     foreach ($in_post_types as $post_type) {
-        register_rest_field( $post_type, 'begruendung',
+        register_rest_field( $post_type, '_begruendung',
             array(
                 'get_callback'    => 'slug_get_post_meta_cb',
                 'schema'          => null
             )
         );
-        register_rest_field( $post_type, 'massnahmen',
+        register_rest_field( $post_type, '_massnahmen',
             array(
                 'get_callback'    => 'slug_get_post_meta_cb',
                 'schema'          => null

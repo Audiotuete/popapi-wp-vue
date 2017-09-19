@@ -31,8 +31,8 @@ export default {
   },
   computed: {
     dazu_gehoeren () { return this.forderung.content.rendered },
-    begruendung () { return this.forderung.begruendung[0] },
-    massnahmen () { return this.forderung.massnahmen[0] }
+    begruendung () { return this.forderung._begruendung[0] },
+    massnahmen () { return this.forderung._massnahmen[0] }
   },
   methods: {
     check_id (id) {
