@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'charterbold_italic';
+  src: url('../fonts/charter_bold_italic-webfont.eot');
+  src: url('../fonts/charter_bold_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/charter_bold_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'charterbold';
+  src: url('../fonts/charter_bold-webfont.eot');
+  src: url('../fonts/charter_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/charter_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'charteritalic';
+  src: url('../fonts/charter_italic-webfont.eot');
+  src: url('../fonts/charter_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/charter_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'charterregular';
+  src: url('../fonts/charter_regular-webfont.eot');
+  src: url('../fonts/charter_regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/charter_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+:focus {
+  outline: 0;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.jumbotron-container {
+  display: flex;
+  position: relative;
+  height: 12rem;
+  z-index: 10;
+  background: #fff;
+  justify-content: center;
+}
+.jumbotron-content {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  width: 64rem;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.jumbotron-content .pre-title {
+  font-weight: normal;
+  font-size: 2.25rem;
+}
+.jumbotron-content .site-title {
+  font-size: 4rem;
+}
+.nav-container {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+.navbar {
+  display: flex;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.navbar .unterzeichnen--container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-left: 8%;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 0;
+}
+.navbar .unterzeichnen--container:hover {
+  font-size: 1.5rem;
+}
+.navbar .unterzeichnen--container a {
+  flex: 1;
+  font-weight: 700;
+  border: 2px solid #d0011b;
+  border-radius: 3px;
+  line-height: 0;
+  padding: 26px 14px 23px 14px;
+  text-decoration: none;
+  color: #a60014;
+  cursor: pointer;
+}
+.navbar .primary-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 690px;
+  padding: 0;
+  margin: 0;
+}
+.navbar .primary-menu .current-menu-item {
+  border-bottom: 8px solid black;
+}
+.navbar .primary-menu .menu-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: center;
+  padding: 0;
+  height: 80px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  box-sizing: border-box;
+  transition: all 0.1s ease-in-out;
+}
+.navbar .primary-menu .menu-item:hover {
+  border-bottom: 8px solid black;
+}
+.navbar .primary-menu .menu-item a {
+  flex: 1;
+  line-height: 42px;
+  height: 58px;
+  text-decoration: none;
+  color: #333;
+  cursor: default;
+}
+.page-container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 4rem;
+  width: 64rem;
+  display: flex;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+.page-container h4 {
+  padding-top: 1.5rem;
+  letter-spacing: 1.5;
+  margin-bottom: -0.5rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+.page-container p {
+  padding-top: 1rem;
+  margin-left: 0.5rem;
+  color: #4a4a4a;
+}
+.page-container strong {
+  font-family: 'charterbold';
+}
+.page-container .devider {
+  align-self: none;
+  height: 8px;
+  width: 100%;
+  background-color: #7d1816;
+}
+.petition-link {
+  font-size: 1.5rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  border: 2px solid #d0011b;
+  border-radius: 3px;
+  line-height: 2;
+  padding: 1rem 1.1rem 0.9rem 1.1rem;
+  text-decoration: none;
+  color: #a60014;
+  cursor: pointer;
+}
+.presse-link {
+  color: blue;
+  text-decoration: none;
+}
+.content-container {
+  flex: 0.78;
+  padding-right: 3rem;
+}
+.slider-container {
+  flex: 0.29;
+  width: 14rem;
+}
+body {
+  font-family: 'charterregular', sans-serif;
+}
+.site-container {
+  display: flex;
+  justify-content: center;
+}

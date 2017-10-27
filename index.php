@@ -1,18 +1,18 @@
-<?php
-/**
- * This is the bare minimum output. The "Vue App" assets will be enqueued and will be used
- * for all template rendering.
- */
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	<?php wp_head(); ?>
-</head>
-<body <?php body_class();  ?> >
-<div id="app"></div>
-<?php wp_footer(); ?>
-</body>
-</html>
+<?php get_header(); ?>
+
+<main class="site-container">
+	<div class="page-container">
+			<div class="content-container">
+
+				<?php if ( have_posts() ) : ?>
+					<?php while( have_posts() ) : the_post(); ?>
+						<?php the_content(); ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
+				
+			</div>
+			<div class="slider-container"></div>
+	</div>
+</main>	
+
+<?php get_footer(); ?>

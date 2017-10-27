@@ -1,0 +1,26 @@
+.jumbotron-container {
+	display: flex;
+	position: relative;
+	height: 12rem;
+	z-index: 10;
+	background: #fff;
+	justify-content: center;
+}
+.jumbotron-content {
+	margin-left: 2rem;
+	margin-right: 2rem;
+	display: flex;
+	width: 64rem;
+
+	font-family: "PT Sans Narrow", sans-serif;
+
+	.pre-title {
+		font-weight: normal;
+		font-size: 2.25rem;
+	}
+
+	.site-title {
+		font-size: 4rem;
+	}
+}
+

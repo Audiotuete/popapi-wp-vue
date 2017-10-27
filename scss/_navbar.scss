@@ -1,0 +1,87 @@
+// NAVBAR - MOBILE LAYOUT
+
+.nav-container {
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.navbar{
+	display: flex;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	justify-content: center;		
+	flex-direction: row;
+	flex-wrap: nowrap;
+	// justify-content: center;
+
+
+		.unterzeichnen--container {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			text-align: center;
+
+			margin-left: 8%;
+			font-family: "PT Sans Narrow", sans-serif;
+			font-size: 1.5rem;
+			font-weight: 400;
+			line-height: 0;
+			
+			&:hover {
+				font-size: 1.5rem;
+			}
+
+			a {
+				flex: 1;
+				font-weight: 700;
+				border: 2px solid #D0011B;
+				border-radius: 3px;
+				line-height: 0;
+
+				padding: 26px 14px 23px 14px;
+				text-decoration: none;
+				color: #A60014;
+				cursor: pointer;							
+			}
+		
+		}
+
+		.primary-menu {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 690px;
+			padding: 0;
+			margin: 0;
+
+				.current-menu-item {
+					border-bottom: 8px solid black;
+				}	
+
+				.menu-item {
+					display: flex;
+					justify-content: flex-start;
+					align-items: flex-end;
+					text-align: center;
+					padding: 0;
+					height: 80px;
+					font-family: "PT Sans Narrow", sans-serif;
+					font-size: 1.5rem;
+					font-weight: 400;
+					box-sizing: border-box;
+					transition: all 0.1s ease-in-out;
+
+					&:hover {
+						border-bottom: 8px solid black;
+					}
+
+						a {
+							flex: 1;
+							line-height: 42px;
+							height: 58px;
+							text-decoration: none;
+							color: #333;
+							cursor: default;							
+						}
+				}
+		} // .primary-menu END
+} // #navbar END

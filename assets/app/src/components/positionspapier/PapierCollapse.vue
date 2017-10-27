@@ -34,13 +34,15 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .collapse {
   margin-bottom: 2px;
 }
 .collapse .collapse-header {
+  font-size: 1.2rem;
   padding: 20px 20px 20px 40px;
-  background: green;
+  border: 1px solid black;
+  background: #fff;
   border-radius: 3px;
   position: relative;
 }
@@ -69,7 +71,7 @@ export default {
   transform: rotate(0deg);
 }
 .collapse .collapse-content-box {
-
+  font-family: 'charterregular', Arial, sans-serif;
   transition: all .2s;
   padding: 30px 40px;
   border-left: 2px solid #f7f7f7;

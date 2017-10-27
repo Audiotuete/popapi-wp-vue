@@ -1,0 +1,63 @@
+.page-container {
+	margin-left: 2rem;
+	margin-right: 2rem;
+	margin-bottom: 4rem;
+	width: 64rem;
+	display: flex;
+	font-size: 1.0625rem;
+	line-height: 1.5;
+
+		h4 {
+			padding-top: 1.5rem;
+			letter-spacing: 1.5;
+			margin-bottom: -0.5rem;
+			font-family: "PT Sans Narrow", sans-serif;
+			font-weight: normal;
+			font-size: 1.4rem;
+		}
+
+		p {
+			padding-top: 1rem;
+			margin-left: 0.5rem;
+			color: #4a4a4a;
+		}
+
+		strong {
+			font-family: 'charterbold';
+		}
+
+		.devider {
+			align-self: none;
+			height: 8px;
+			width: 100%;
+			background-color: #7d1816;
+		}
+}
+
+.petition-link {
+	font-size: 1.5rem;
+	font-family: "PT Sans Narrow", sans-serif;
+	font-weight: 700;
+	border: 2px solid #d0011b;
+	border-radius: 3px;
+	line-height: 2;
+	padding: 1rem 1.1rem 0.9rem 1.1rem;
+	text-decoration: none;
+	color: #a60014;
+	cursor: pointer;	
+}	
+
+.presse-link {
+	color: blue;
+	text-decoration: none;
+}
+
+.content-container {
+	flex: 0.78;
+	padding-right: 3rem;
+}
+
+.slider-container {
+	flex: 0.29;
+	width: 14rem;
+}

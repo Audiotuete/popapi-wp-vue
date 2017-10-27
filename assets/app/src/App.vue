@@ -1,23 +1,23 @@
 
 <template>
   <div id="app">
-    <TopNavigation></TopNavigation>
-    <router-view class="page-wrapper"></router-view>
+    <!-- <TopNavigation></TopNavigation> -->
+    <PapierContainer/>
   </div>
 </template>
 
 <script>
-import TopNavigation from './TopNavigation'
+import PapierContainer from './components/positionspapier/PapierContainer'
 
 export default {
   name: 'app',
   components: {
-    TopNavigation
+    PapierContainer
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700');
 
 body {
@@ -26,16 +26,24 @@ body {
 }
 
 #app {
+  position: relative;
+  margin-top: 2rem;
   font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  p, ol, ul, li {
+    line-height: 1.5;
+    margin: 1rem;
+  }
+  ol, ul, li {
+    margin: 0.5rem;
+  }
 }
 
-.page-wrapper {
-  width: 64rem;
-  /* border: 1px solid rgba(0, 0, 0, 0.1); */
-}
+
+
 </style>

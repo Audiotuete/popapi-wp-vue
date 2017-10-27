@@ -1,7 +1,8 @@
 <template>
   <div class="tabs">
     <div>
-      <button v-for="(tab, index) in tabs" :key="tab.id" 
+      <button class="tab-button"
+              v-for="(tab, index) in tabs" :key="tab.id" 
               :class="{active : currentTab === index }"
               @click="currentTab = index">{{tab.abschnitt}}</button>
     </div>
@@ -52,8 +53,14 @@ button{
   padding: 10px;
 }
 button.active{
-  background-color: blue;
+  background-color: #fff;
 }
+
+.tab-button {
+  font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+}
+
 .tab-content div{
   padding: 30px;
   border: 1px solid #ccc;
