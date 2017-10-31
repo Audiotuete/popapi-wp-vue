@@ -1,15 +1,17 @@
 <template>
-  <div class="tabs">
-    <div>
+  <div class="tabs-container">
+    <div class="tab-button-container" :class="bereich">
       <button class="tab-button"
               v-for="(tab, index) in tabs" :key="tab.id" 
-              :class="{active : currentTab === index }"
-              @click="currentTab = index">{{tab.abschnitt}}</button>
+              :class="[{active : currentTab === index }, bereich]"
+              @click="currentTab = index"><div class="tab-text" :class="{active : currentTab === index }">{{tab.abschnitt}}</div></button>
     </div>
-    <div v-for="(tab, index) in tabs" :key="tab.id" class="tab-content">
-      <div v-html="check_id(tab.id)" v-show="currentTab === tab.id">
-
-      </div>
+    <div 
+        v-for="(tab, index) in tabs" 
+        :key="tab.id" 
+        class="tab-content" 
+        :class="[{active : currentTab === index }, bereich]">
+      <div class="tab-text"  v-html="check_id(tab.id)" v-show="currentTab === tab.id"/>
     </div>
   </div>
 </template>
@@ -18,7 +20,8 @@
 export default {
   name: 'PapierTabs',
   props: [
-    'forderung'
+    'forderung',
+    'bereich'
   ],
   data () {
     return {
@@ -48,21 +51,40 @@ export default {
 }
 </script>
 
-<style scoped>
-button{
-  padding: 10px;
+<style lang="scss" scoped>
+
+.tab-text {
+  color: #333;
+    &.active {
+    font-weight: 700;
+  }
 }
-button.active{
-  background-color: #fff;
+
+.tab-button-container:nth-child(1) {
+  border-left: 1px solid;
 }
 
 .tab-button {
+  border: 1px solid;
+  border-left: none;
+  border-bottom: none;
+  background: #eee;
+  width: 10rem;
+  height: 2.25rem;
   font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
   font-size: 1.1rem;
+
+  &.active {
+    background: #fff;
+    // border-top: 3px solid;
+  }
 }
 
-.tab-content div{
-  padding: 30px;
-  border: 1px solid #ccc;
+.tab-content.active {
+  border: 1px solid;
+  padding: 2rem;
 }
+
+
+
 </style>

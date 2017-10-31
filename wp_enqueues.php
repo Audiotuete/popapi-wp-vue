@@ -26,6 +26,16 @@ function customtheme_setup() {
 }
 add_action('after_setup_theme', 'customtheme_setup');
 
+
+// A Footer Sidbar 
+function footerWidget() {
+	register_sidebar( array(
+		name	=>'Footer',
+		id		=>'footer'
+	));
+}
+
+add_action( 'widgets_init', 'footerWidget' )
 // function customize_mobile_mid($wp_customize) {
 // 	$wp_customize->add_section('vetter-mobile-mid-section', array(
 // 			'title' => 'Bilder: Handyansicht'

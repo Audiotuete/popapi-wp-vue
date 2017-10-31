@@ -1,27 +1,27 @@
 <template>
-  <div class="collapse collapse-item" :class="{ 'is-active': active }">
-    <div class="collapse-header touchable" role="tab" :aria-expanded="active ? 'true' : 'false'" @click.prevent="toggle">
-      <slot name="collapse-header"></slot>
-    </div>
-    <transition name="fade">
-      <div class="collapse-content" v-if="active">
-        <div class="collapse-content-box">
-          <slot name="collapse-body"></slot>
-        </div>
+    <div class="collapse collapse-item" :class="[{ 'is-active': active }, bereich]">
+      <div class="collapse-header touchable" :class="[{ 'is-active': active }, bereich]" role="tab" @click.prevent="toggle">
+        <slot  name="collapse-header"></slot>
       </div>
-    </transition>
-  </div>
+      <transition name="fade">
+        <div class="collapse-content" :class="bereich" v-if="active">
+          <div class="collapse-content-box" >
+            <slot name="collapse-body"></slot>
+          </div>
+        </div>
+      </transition>
+    </div>
 </template>
 
 <script>
 export default {
   name: 'papierCollapse',
+  props: ['bereich'],
   data () {
     return {
       active: false
     }
   },
-
   methods: {
     toggle () {
       this.active = !this.active
@@ -34,17 +34,18 @@ export default {
 </script>
 
 
-<style scoped>
-.collapse {
-  margin-bottom: 2px;
-}
+<style lang="scss" scoped>
+
 .collapse .collapse-header {
-  font-size: 1.2rem;
+  color: #333;
+  font-size: 1.3rem;
   padding: 20px 20px 20px 40px;
-  border: 1px solid black;
+  border-width: 1.5px;
+  border-top: 0;
+  border-style: solid;
   background: #fff;
-  border-radius: 3px;
   position: relative;
+
 }
 .collapse .collapse-header > div {
   display: flex;
@@ -62,22 +63,26 @@ export default {
   font-size: 0.4em;
   top: calc(50% - 0.4em);
   left: 20px;
-  color: blue;
-
   transform: rotate(-90deg);
 }
-.collapse.is-active .collapse-header::before {
 
+.collapse.is-active .collapse-header::before {
   transform: rotate(0deg);
 }
+.collapse-header.is-active {
+  border-bottom: none;
+}
+
+.collapse-content {
+  border: 1.5px solid;
+  border-top: none;
+}
+
 .collapse .collapse-content-box {
+  color: #333;
   font-family: 'charterregular', Arial, sans-serif;
   transition: all .2s;
-  padding: 30px 40px;
-  border-left: 2px solid #f7f7f7;
-  border-bottom: 2px solid #f7f7f7;
-  border-right: 2px solid #f7f7f7;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  padding: 0 2rem 1.5rem 2rem;
+
 }
 </style>

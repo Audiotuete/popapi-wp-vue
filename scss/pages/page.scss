@@ -1,7 +1,7 @@
 .page-container {
 	margin-left: 2rem;
 	margin-right: 2rem;
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 	width: 64rem;
 	display: flex;
 	font-size: 1.0625rem;
@@ -19,7 +19,7 @@
 		p {
 			padding-top: 1rem;
 			margin-left: 0.5rem;
-			color: #4a4a4a;
+			color: #333333;
 		}
 
 		strong {
@@ -44,7 +44,11 @@
 	padding: 1rem 1.1rem 0.9rem 1.1rem;
 	text-decoration: none;
 	color: #a60014;
-	cursor: pointer;	
+	cursor: pointer;
+
+		&:hover {
+			border-width: 2.5px;
+		}	
 }	
 
 .presse-link {

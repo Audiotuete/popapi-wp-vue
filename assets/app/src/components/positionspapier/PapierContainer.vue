@@ -14,34 +14,56 @@ export default {
   name: 'PapierContainer',
   components: {
     PapierNavigation
-  },
-  data () {
-    return {
-      msg: 'Der Test'
-    }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss">
 
   .wrapper {
     position: relative;
-    width: 64rem;
+    width: 100%;
+    max-width: 64rem;
   }
 
   .papier-nav {
     position: absolute;
     left: -12.5rem;
   }
+
+  @media (max-width: 1500px) {
+    .papier-nav {
+      position:relative;
+      left: 0;
+    }
+
+  }
   
   .papier-container {
-    width: 64rem;
+    display: flex;
+    min-height: 32rem;
     border: 1px solid rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
     padding: 2rem;
     box-sizing: border-box;
+  }
+
+  .governance {
+    color: #2F52A0;
+    border-color: #2F52A0;
+  }
+  .betrieb {
+    color: #238EA5;
+    border-color: #238EA5;
+
+  }
+  .forschung {
+    color: #F7A723;
+    border-color: #F7A723;
 }
+  .lehre {
+    color: #F18825;
+    border-color: #F18825;
+  }
 
 </style>
