@@ -1,0 +1,51 @@
+
+.startseite-link-container {
+  display: flex;
+  height: 2.625rem;
+  align-items: center;
+  margin-bottom: 1.75rem;
+
+  .links-adressaten {
+    margin-left: 2.5rem;
+
+    a {
+      background: #2980b9;
+
+      &:hover {
+        background: #3498db;
+      }
+    }
+  }
+
+  .links-infos {
+    margin-left: 2.5rem;
+
+    a {
+      background: #27ae60;
+
+      &:hover {
+        background: #2ecc71;
+      }
+    } 
+
+  }
+
+  p {
+    padding: 0;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 1.3rem;
+    
+  }
+
+  a {
+    background: grey;
+    padding: 0.9rem 2rem;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-right: 1rem;
+    text-decoration: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  }
+}

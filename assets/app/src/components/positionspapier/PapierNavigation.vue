@@ -83,8 +83,8 @@ export default {
     :nth-child(5) {
       border-bottom: 0px;
       border-right: 1px solid rgba(0, 0, 0, 0.25);
-    }
   }
+}
 
   .link-list-item {
     display: flex;

@@ -12,6 +12,7 @@
 
 
 	<header class="jumbotron-container">
+	<a href="http://www.nachhaltige-hochschulen.de/info/">
 		<div class="jumbotron-content">
 		<h1 class="site-title">
 			<span class="pre-title">
@@ -21,9 +22,11 @@
 			an Hochschulen
 		</h1>
 		</div>
+		</a>
 	</header>
 	<div class="nav-container">
 		<nav class="navbar">
+			<div class="home-link-container"><a class="link-to-home" href='http://www.nachhaltige-hochschulen.de/'><img class="home-icon" src="http://www.nachhaltige-hochschulen.de/wp-content/themes/PoPaPi/icons/home-button.png"  alt="home-link"/></a></div>
 			<?php
 				wp_nav_menu(array(
 						'theme_location' 	=> 'primary',

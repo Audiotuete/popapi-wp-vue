@@ -4,14 +4,20 @@
 	height: 13rem;
 	background: #fff;
 	justify-content: center;
+
+	a {
+		color: #333;
+		text-decoration: none;
+	}
 }
 .jumbotron-content {
 	margin-left: 2rem;
 	margin-right: 2rem;
 	display: flex;
 	width: 64rem;
-
 	font-family: "PT Sans Narrow", sans-serif;
+
+
 
 	.pre-title {
 		font-weight: normal;
