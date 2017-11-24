@@ -1,14 +1,25 @@
 // NAVBAR - MOBILE LAYOUT
 
+
+
+
 .nav-container {
 	display: flex;
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
-	justify-content: center;		
-	
+	justify-content: center;
 }
 
+// .color-bar {
+// 	margin: 0 20% 0 20%;
+// 	height: 6px;
+// 	background: #000;
+// 	background: -moz-linear-gradient(left, #2f52a0 1%, #2f52a0 25%, #238ea5 25%, #238ea5 25%, #238ea5 50%, #f7a723 50%, #f7a723 75%, #f18825 75%, #f18825 100%);
+// 	background: -webkit-linear-gradient(left, #2f52a0 1%,#2f52a0 25%,#238ea5 25%,#238ea5 25%,#238ea5 50%,#f7a723 50%,#f7a723 75%,#f18825 75%,#f18825 100%);
+// 	background: linear-gradient(to right, #2f52a0 1%,#2f52a0 25%,#238ea5 25%,#238ea5 25%,#238ea5 50%,#f7a723 50%,#f7a723 75%,#f18825 75%,#f18825 100%);
+// }
+
 .navbar{
-	display: flex;	
+	display: flex;
 	width: 64rem;
 	justify-content: flex-start;			
 	margin-left: 2rem;
@@ -33,18 +44,19 @@
 		}
 	}
 
-	.unterzeichnen--container {
+	.left-nav-container {
 		display: flex;
+		position: relative;
 		justify-content: flex-start;
 		align-items: center;
 		text-align: center;
-		margin-left: 12.5rem;
+		margin-left: 10.5rem;
 		font-family: "PT Sans Narrow", sans-serif;
 		font-size: 1.7rem;
 		font-weight: 400;
 		line-height: 0;
 
-		a {
+		a.unterzeichnen-link {
 			flex: 1;
 			font-weight: 700;
 			border: 2px solid #D0011B;
@@ -59,6 +71,33 @@
 			&:hover {
 				border-width: 2.5px;
 			}
+		}
+
+		.download-link {
+			position: absolute;
+			top: -3rem;
+			font-size: 1rem;
+			height: 3rem;
+			width: 8.85rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border: 2px solid #000;
+			border-radius: 3px;
+			line-height: 1;
+	
+			padding: 0 1rem 0 0.4rem;
+			text-decoration: none;
+			color: #333;
+			cursor: pointer;
+			
+			&:hover {
+				border-width: 2.5px;
+			}
+		}
+	
+		.download-icon {
+			height: 2rem;			
 		}
 	
 	}

@@ -1,6 +1,7 @@
 .jumbotron-container {
 	display: flex;
 	position: relative;
+	margin-top: .5rem;
 	height: 13rem;
 	background: #fff;
 	justify-content: center;
@@ -27,5 +28,11 @@
 	.site-title {
 		font-size: 4rem;
 	}
-}
 
+	.logo-group {
+		position: absolute;
+		width: 24rem;
+		left: 47%;
+		top: 6%;
+	}
+}

@@ -45,6 +45,7 @@ table {
 .jumbotron-container {
   display: flex;
   position: relative;
+  margin-top: 0.5rem;
   height: 13rem;
   background: #fff;
   justify-content: center;
@@ -66,6 +67,12 @@ table {
 }
 .jumbotron-content .site-title {
   font-size: 4rem;
+}
+.jumbotron-content .logo-group {
+  position: absolute;
+  width: 24rem;
+  left: 47%;
+  top: 6%;
 }
 .nav-container {
   display: flex;
@@ -92,18 +99,19 @@ table {
 .navbar .home-link-container .home-icon {
   height: 2rem;
 }
-.navbar .unterzeichnen--container {
+.navbar .left-nav-container {
   display: flex;
+  position: relative;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  margin-left: 12.5rem;
+  margin-left: 10.5rem;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.7rem;
   font-weight: 400;
   line-height: 0;
 }
-.navbar .unterzeichnen--container a {
+.navbar .left-nav-container a.unterzeichnen-link {
   flex: 1;
   font-weight: 700;
   border: 2px solid #d0011b;
@@ -114,8 +122,31 @@ table {
   color: #a60014;
   cursor: pointer;
 }
-.navbar .unterzeichnen--container a:hover {
+.navbar .left-nav-container a.unterzeichnen-link:hover {
   border-width: 2.5px;
+}
+.navbar .left-nav-container .download-link {
+  position: absolute;
+  top: -3rem;
+  font-size: 1rem;
+  height: 3rem;
+  width: 8.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 3px;
+  line-height: 1;
+  padding: 0 1rem 0 0.4rem;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+.navbar .left-nav-container .download-link:hover {
+  border-width: 2.5px;
+}
+.navbar .left-nav-container .download-icon {
+  height: 2rem;
 }
 .navbar .primary-menu {
   display: flex;
@@ -184,7 +215,9 @@ table {
   font-family: 'charterbold';
 }
 .page-container hr {
-  margin-top: 0;
+  margin-top: 0px;
+  border: 0;
+  height: 2px;
 }
 .page-container .devider {
   align-self: none;
@@ -363,6 +396,13 @@ table {
   margin-left: 2rem;
   text-decoration: none;
   list-style: none;
+}
+.footer-content .contact-link {
+  margin-top: 0.5rem;
+  margin-left: 10%;
+}
+.footer-content .mail-icon {
+  height: 4rem;
 }
 body {
   font-family: 'charterregular', sans-serif;
