@@ -28,14 +28,25 @@ add_action('after_setup_theme', 'customtheme_setup');
 
 
 // A Footer Sidbar 
-function footerWidget() {
+function addWidgets() {
+	register_sidebar( array(
+		name	=>'Supporter-Logos',
+		id		=>'supporter-logos',
+		description   => '',
+		before_widget => '<div class="supporter-logo-container">',
+		after_widget  => '</div>',
+		before_title  => '<span style="display: none">',
+		after_title   => '</span>' 
+	));
 	register_sidebar( array(
 		name	=>'Footer',
 		id		=>'footer'
 	));
 }
 
-add_action( 'widgets_init', 'footerWidget' )
+
+
+add_action( 'widgets_init', 'addWidgets' )
 // function customize_mobile_mid($wp_customize) {
 // 	$wp_customize->add_section('vetter-mobile-mid-section', array(
 // 			'title' => 'Bilder: Handyansicht'

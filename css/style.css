@@ -69,6 +69,7 @@ table {
   font-size: 4rem;
 }
 .jumbotron-content .logo-group {
+  cursor: default;
   position: absolute;
   width: 24rem;
   left: 47%;
@@ -216,8 +217,6 @@ table {
 }
 .page-container hr {
   margin-top: 0px;
-  border: 0;
-  height: 2px;
 }
 .page-container .devider {
   align-self: none;
@@ -259,7 +258,7 @@ table {
 }
 .content-container {
   flex: 0.78;
-  padding-right: 3rem;
+  padding-right: 2rem;
 }
 .slider-container {
   flex: 0.29;
@@ -377,6 +376,22 @@ table {
   text-decoration: none;
   border-radius: 2px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+.supporter-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.supporter-logos .supporter-logo-container {
+  display: flex;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+.supporter-logos .supporter-logo-container img {
+  max-height: 60px;
+  width: auto;
 }
 .footer-container {
   display: flex;
