@@ -48,9 +48,8 @@ function get_app_script() {
 /**
  * Enqueues the scripts
  */
-add_action( 'wp_enqueue_scripts', function() {
-	enqueue_vue_app();
-} );
+add_action( 'wp_enqueue_scripts','enqueue_vue_app');
+
 /**
  * Enqueues the stylesheet and js
  */

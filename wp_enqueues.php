@@ -23,7 +23,13 @@ function customtheme_setup() {
 
 	// Adding dynamic Title support
 	add_theme_support('title_tag');
+	// Remove auto <p> tags from default Post excerpts
+	remove_filter( 'the_excerpt', 'wpautop' );
+	// Adjust excerpt length
+	add_filter( 'excerpt_length', function() {return 35;} );
+	add_theme_support( 'post-thumbnails' );	
 }
+
 add_action('after_setup_theme', 'customtheme_setup');
 
 
