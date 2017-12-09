@@ -1,0 +1,49 @@
+
+.single-post-container {
+  max-width: 52rem;
+  flex: 3;
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .single-post-header {
+    display: flex;
+    line-height: 1.2;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .single-post-title {
+      font-size: 1.6rem;
+    }
+
+    .post-info {
+      color: #aaa;
+      padding-top: 0.2rem;
+      text-align: right;
+      min-width: 10rem;
+    }
+  }
+
+  .single-post-content {
+    display: flex;
+    flex-direction: column;
+
+    .wp-caption {
+      margin: auto;
+
+      .wp-caption-text {
+        font-size: 75%;
+        color: #aaa;
+      }
+    }
+
+    img {
+      margin: auto;
+      display: block;
+      border-radius: 3px;
+      width: auto
+    }
+  }
+}

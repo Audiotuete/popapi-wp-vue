@@ -1,0 +1,48 @@
+.posts-list-container {
+  max-width: 52rem;
+}
+
+.posts-item-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.posts-thumbnail {
+  flex: 1;
+}
+
+.wp-post-image {
+  border-radius: 3px;
+}
+
+.posts-content {
+  flex: 3;
+  margin-left: 1rem;
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .posts-read-more {
+    font-weight: bold
+  }
+  .posts-header {
+    display: flex;
+    line-height: 1.2;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .post-info {
+      color: #aaa;
+      padding-top: 0.2rem;
+      text-align: right;
+      min-width: 10rem;
+    }
+  }
+  .posts-excerpt {
+    display: flex;
+  }
+}
+

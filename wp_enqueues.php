@@ -26,8 +26,11 @@ function customtheme_setup() {
 	// Remove auto <p> tags from default Post excerpts
 	remove_filter( 'the_excerpt', 'wpautop' );
 	// Adjust excerpt length
-	add_filter( 'excerpt_length', function() {return 35;} );
+	add_filter( 'excerpt_length', function() {return 45;} );
 	add_theme_support( 'post-thumbnails' );	
+	add_image_size( 'post-thumbnail', 200, 150, true );
+	add_image_size( 'post-thumbnail-image', 600, 450, true );
+	
 }
 
 add_action('after_setup_theme', 'customtheme_setup');
